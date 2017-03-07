@@ -1,0 +1,28 @@
+.Container-header {
+  /*text-align: center;*/
+}
+
+.Header-logo {
+  animation: App-logo-spin infinite 20s linear;
+  width: 5%;
+  display: inline-block;
+  margin-top: -13px;
+}
+
+.Header-header {
+  background-color: #222;
+  color: white;
+  overflow: hidden;
+  max-height: 75px;
+  position: relative;
+  padding: 0px 25px;
+}
+
+.Header-header h2 {
+  display: inline-block;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

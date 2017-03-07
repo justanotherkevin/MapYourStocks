@@ -1,0 +1,11 @@
+.stock-full-info {
+  display: inline-table;
+  max-width: 230px;
+  /*padding-left: 0px !important;*/
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+}
+.stock-full-info ul {
+  list-style-type: none;
+  padding-left: 0px;
+}

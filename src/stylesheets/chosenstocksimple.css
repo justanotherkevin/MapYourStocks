@@ -1,0 +1,42 @@
+.main-body {
+  width: 70%;
+  display: inline-table;
+}
+
+.main-body ul {
+  text-align: center;
+  padding-left: 0;
+  max-height: 90vh;
+  overflow: scroll;
+}
+.stock tr th {
+  text-align: center;
+}
+.stock table {
+  font-size: 1.5vh;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: transparent;
+}
+.stock tr:nth-child(odd) {
+  background-color: rgba(138, 151, 161, 0.7);
+}
+.stock tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.41);
+}
+.stock {
+  width: 200px;
+  height: 200px;
+  display: inline-table;
+  margin: 20px 10px;
+  border-radius: 20px;
+  background-color:rgba(255, 255, 255, 0.5);
+}
+.stock:hover {
+  background-color: rgba(178, 206, 207, 0.6);
+}
+.stock h3 {
+  height: 50px;
+  overflow-y: scroll;
+}
