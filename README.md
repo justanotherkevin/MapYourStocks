@@ -7,3 +7,6 @@ run by entering in the terminal `npm run`
 ###Install  
 In terminal run   
 `npm install` 
+
+
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/ezgif-2-139f0ad163.gif "Logo Title Text 1")
