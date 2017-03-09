@@ -4,6 +4,7 @@ import ChosenStockSimple from "./ChosenStockSimple";
 class ChosenStocks extends Component {
 
   render() {
+    // debugger
     return(
       <section className="main-body">
         <ul>
@@ -13,9 +14,9 @@ class ChosenStocks extends Component {
               <ChosenStockSimple key={i}
                      symbol={element.symbol}
                      name={element.Name}
-                     change={element.Change}
-                     high={element.DaysHigh}
-                     low={element.DaysLow}
+                     change={element.ChangeinPercent}
+                     ask={element.Ask}
+                     bid={element.Bid}
                      current={element.LastTradePriceOnly}
                      setFullInfoComp={this.props.setFullInfoComp}
                     //  setStockInfo={this.props.setStockInfo}
