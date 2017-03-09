@@ -12,3 +12,7 @@ body {
 html {
   height: 100%;
 }
+
+.body-container {
+  display: inline-flex;
+}

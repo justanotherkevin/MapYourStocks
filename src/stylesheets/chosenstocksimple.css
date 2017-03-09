@@ -1,6 +1,6 @@
 .main-body {
   width: 70%;
-  display: inline-table;
+  display: inline-block;
 }
 
 .main-body ul {
@@ -13,10 +13,10 @@
   text-align: center;
 }
 .stock table {
-  font-size: 1.5vh;
-  width: 100%;
-  max-width: 100%;
-  margin-bottom: 20px;
+  font-size: 10px;
+  max-width: 200px;
+  /*width: 100%;*/
+  border-radius: 20px;
   background-color: transparent;
 }
 .stock tr:nth-child(odd) {
@@ -27,8 +27,9 @@
 }
 .stock {
   width: 200px;
-  height: 200px;
-  display: inline-table;
+  max-width: 200px;
+  height: 220px;
+  display: inline-block;
   margin: 20px 10px;
   border-radius: 20px;
   background-color:rgba(255, 255, 255, 0.5);
@@ -39,4 +40,26 @@
 .stock h3 {
   height: 50px;
   overflow-y: scroll;
+  margin: 10px;
+}
+.stock .symbol {
+  height: 55px;
+  line-height: 55px;
+}
+
+@-webkit-keyframes flash {
+    0% {
+        background-color: rgb(107, 172, 214);
+        opacity:1;
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 0.41);
+    }
+}
+
+.flash {
+    -webkit-animation-name: flash;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
 }
