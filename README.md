@@ -9,4 +9,4 @@ In terminal run
 `npm install` 
 
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/ezgif-2-139f0ad163.gif "Logo Title Text 1")
+![alt text](https://github.com/polymer940c/MapYourStocks/blob/master/src/ezgif-2-139f0ad163.gif "Logo Title Text 1")
