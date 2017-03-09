@@ -28,8 +28,10 @@ class App extends Component {
     return (
       <div className="Site-container" >
         <Header title={this.state.title}/>
-        <ChosenStocks data={this.state.yahooApiReturn} setFullInfoComp={this.setFullInfoComp.bind(this)}/>
-        <ChosenStockFullInfo data={this.state.oneFullStockInfo}/>
+        <div className="body-container">
+          <ChosenStocks data={this.state.yahooApiReturn} setFullInfoComp={this.setFullInfoComp.bind(this)}/>
+          <ChosenStockFullInfo data={this.state.oneFullStockInfo}/>
+        </div>
       </div>
     )
   }
