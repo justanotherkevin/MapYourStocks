@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import ChosenStockSimple from "./ChosenStockSimple";
 
 class ChosenStocks extends Component {
-debugger
 
   render() {
-    // debugger
     return(
       <section className="main-body">
         <ul>
@@ -19,6 +17,8 @@ debugger
                      high={element.DaysHigh}
                      low={element.DaysLow}
                      current={element.LastTradePriceOnly}
+                     setFullInfoComp={this.props.setFullInfoComp}
+                    //  setStockInfo={this.props.setStockInfo}
                     //  changeStock={this.props.changeStock(ticker)}
               />
             )

@@ -19,25 +19,22 @@ class App extends Component {
   }
 
   componentWillMount() {
-    console.log("did mount ");
+    // console.log("did mount ");
     this.callYahooApi();
-    this.setFullInfoComp('DBC');
+    // this.setFullInfoComp('DBC');
   }
 
   render() {
-    console.log("render yahoo api " + this.state.yahooApiReturn)
-    // debugger
     return (
       <div className="Site-container" >
         <Header title={this.state.title}/>
-        <ChosenStocks data={this.state.yahooApiReturn} />
+        <ChosenStocks data={this.state.yahooApiReturn} setFullInfoComp={this.setFullInfoComp.bind(this)}/>
         <ChosenStockFullInfo data={this.state.oneFullStockInfo}/>
       </div>
     )
   }
 
   callYahooApi() {
-    console.log("call api not yet");
     var stocksUrl = this.state.currentStocks.join('%20');
     var url = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%3D%22' + stocksUrl + '%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
     $.getJSON(url).done(
@@ -47,10 +44,12 @@ class App extends Component {
   }
 
   setFullInfoComp(ticker) {
+    // debugger
     var url = 'http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.quotes%20where%20symbol%3D%22' + ticker + '%20%22&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=';
-    $.getJSON(url).done(
-      (data)=>{this.setState({oneFullStockInfo:data.query.results.quote} )
-    })
+    $.getJSON(url).done(function(response) {
+      var data = response.query.results.quote;
+      this.setState({oneFullStockInfo: data});
+    }.bind(this))
   }
 
   // setFullStockInfo() {
